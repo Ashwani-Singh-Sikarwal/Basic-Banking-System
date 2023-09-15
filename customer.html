@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRIP BANK | Customers</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="customer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar starts here  -->
+    <nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="headline">
+            <img src="../Grip-Task/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            The Sparks Foundation Bank
+          </a>
+          <a href="index.html" id="home">HOME-AshwaniSingh</a>
+         
+        </div>
+      </nav>
+    <!-- navbar ends here  -->
+    <br>
+    
+
+    <div class="my-info text-center">
+        <h2>Name: Ashwani Singh Sikarwal</h2>
+        <h4>Net Bank Balance: $<span id="myAccountBalance">53000</span></h4>
+
+        <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+        <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+    </div>
+
+    
+    
+    <!-- Modal send money -->
+    <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transfer Money....</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            
+                            <input type="text" id="enterName" class="form-control" placeholder="Enter Username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="input-group mb-3">
+                            
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                        Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal transaction History-->
+    <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol id="transaction-history-body">
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Bank Balance(in $)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>vittesh</td>
+            <td>singh</td>
+            <td>
+                <p id="vitteshBankBalance">17000</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>jatin</td>
+            <td>kashyap</td>
+            <td>
+                <p id="jatinBankBalance">14300</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>ranveer</td>
+            <td>singh</td>
+            <td>
+                <p id="ranveerBankBalance">36200</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>digvijay</td>
+            <td>singh</td>
+            <td>
+                <p id="digvijayBankBalance">8700</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>rajesh</td>
+            <td>singh</td>
+            <td>
+                <p id="rajeshBankBalance">17600</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>prashant</td>
+            <td>singh</td>
+            <td>
+                <p id="prashantBankBalance">6990</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>deepak</td>
+            <td>soni</td>
+            <td>
+                <p id="deepakBankBalance">2780</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>gaurav</td>
+            <td>singh</td>
+            <td>
+                <p id="gauravBankBalance">1520</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>abhinav</td>
+            <td>kashyap</td>
+            <td>
+                <p id="abhinavBankBalance">14600</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>pavan</td>
+            <td>dev</td>
+            <td>
+                <p id="pavanBankBalance">2520</p>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+      <div class="footer">
+        <a href="">&copy; MADE BY ASHWANI SINGH SIKARWAL</a>
+        <a href="https://github.com/Ashwani-Singh-Sikarwal"><img src="images/github-mark-white.svg" alt="" height="30px" width="30px"></a>
+        <a href="https://www.linkedin.com/in/ashwanisinghsikarwal/"><img src="images/icons8-linkedin-50.png" alt="" height="35px" width="35px"></a>
+      </div>
+    
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#linkedin{
+    text-decoration: none;
+    color: rgb(213, 212, 212);
+    font-size: large;
+    transition: 0.4s;
+    
+
+}
+
+#linkedin:hover{
+    font-size: larger;
+}
+
+body{
+    background-image:url(images/bc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.heading{
+    margin-left: 10px;
+}
+.heading:hover{
+    font-size: 22px;
+    transition: 1s;
+
+}
+.main{
+    height: 380px;
+    width: 650px;
+    background-color: transparent;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+.main button{
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 60px;
+    background-color: #33b249;
+    color: whitesmoke;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.5s;
+
+}
+
+.main p{
+    font-size: 43px;
+   
+    font-family: 'Permanent Marker', cursive;
+    transition: 0.5s;
+}
+.main p:hover{
+    font-size: 44px;
+    
+}
+
+.main span{
+    
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 20px;
+    
+}
+
+.main button:hover{
+    background-color: #2da441;
+    border: 2px solid green;
+    font-size: 17.5px;
+  
+}
+
+.cards{
+    height: 200px;
+    width: 50%;
+    background-color: transparent;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    
+
+
+}
+
+.card-one{
+    height: 250px;
+    width: 250px;
+    background-color: #F0F0F0;
+    border-radius: 30px;
+    opacity: 0.7;
+    text-align: center;
+    
+    box-shadow: 0 0 10px 7px rgb(188, 187, 187);
+    transition: 0.5s;
+    
+    
+    
+}
+ .card-one p{
+    margin-top: 30px;
+    font-weight: 500;
+ }
+
+
+.footer{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(50, 53, 66);
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding-left: 10px;
+    
+}
+.footer a:hover{
+    text-decoration: underline solid white;
+}
+
+.card-one:hover{
+    box-shadow: 0 0 20px 10px rgb(146, 146, 146);
+}
+
+
+
+
