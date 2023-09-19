@@ -59,8 +59,31 @@ input{
 
 table{
     text-align: center;
+    font-size: large;
+   
 
 }
+
+
+table a
+{
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: rgb(2, 114, 219);
+    border-radius: 5px;
+    font-size: large;
+    padding: 2px;
+    transition: 0.5s;
+
+}
+
+table a:hover{
+    color: white;
+    text-decoration: none;
+    background-color:  rgb(75, 77, 234);
+}
+
 
 .footer{
     height: 50px;
